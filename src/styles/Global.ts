@@ -12,6 +12,12 @@ export default createGlobalStyle`
     --land-nav-title: #fff;
     --land-nav-link:#fff;
 
+    --home-video-text: #fff;
+    --home-video-input-color: #fff;
+    --home-video-border-input: #fff;
+    --home-video-icon: #fff;
+
+
     --color-remove: #B02E2E;
   }
 

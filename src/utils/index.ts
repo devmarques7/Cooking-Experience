@@ -22,5 +22,17 @@ export const pageConfig = {
       'Let`s make a delicious cocktail with the best recipe for some friends',
     buttonText: 'Get Started',
   },
+  home: {
+    inicialText: 'Find The Best Recipe For Cocktails',
+    label: {
+      htmlfor: 'search',
+      description: 'search for something',
+    },
+    input: {
+      placeholder: 'Search For Cocktails',
+      type: 'text',
+    },
+  },
   bgUrl: '/src/public/backgroud/background.svg',
+  bgVideoUrl: '/src/public/backgroud/videoBackground.mp4',
 };
