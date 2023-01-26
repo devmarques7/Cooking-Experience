@@ -10,13 +10,6 @@ export const LandingComponent = styled.div<IPageConfig>`
   width: 100%;
   height: 100vh;
 
-  /* linear-gradient(
-      180deg,
-      #00000000 0%,
-      #00000000 85%,
-      #ffffff 100%
-    ), */
-
   background-image: url(${({ bgUrl }) => bgUrl});
 
   background-repeat: no-repeat;

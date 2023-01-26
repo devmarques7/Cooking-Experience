@@ -17,6 +17,11 @@ export default createGlobalStyle`
     --home-video-border-input: #fff;
     --home-video-icon: #fff;
 
+    --home-carrosel-background-color: #090909;
+
+    --home-card-description: #fff;
+
+    --gutter: 20px;
 
     --color-remove: #B02E2E;
   }
@@ -33,6 +38,7 @@ export default createGlobalStyle`
     font-family:"Roboto",sans-serif;
   
   }
+
 
   button {
     cursor: pointer;
