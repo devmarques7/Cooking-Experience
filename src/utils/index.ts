@@ -33,6 +33,9 @@ export const pageConfig = {
       type: 'text',
     },
   },
+  carrosel: {
+    amountOfDrinks: 10,
+  },
   bgUrl: '/src/public/backgroud/background.svg',
   bgVideoUrl: '/src/public/backgroud/videoBackground.mp4',
 };

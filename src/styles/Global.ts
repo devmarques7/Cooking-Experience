@@ -21,6 +21,10 @@ export default createGlobalStyle`
 
     --home-card-description: #fff;
 
+    --home-recipe-description-title: #fff;
+    --home-recipe-description-category: #fff;
+    --home-recipe-description-details: #fff;
+
     --gutter: 20px;
 
     --color-remove: #B02E2E;

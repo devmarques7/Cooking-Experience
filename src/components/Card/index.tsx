@@ -13,6 +13,7 @@ interface ICardProps {
   ingredients: string[];
   instructions: string;
   measurements: string[];
+  onClick?: (event: any) => void;
 }
 
 const Card = ({
@@ -22,11 +23,11 @@ const Card = ({
   setor,
   img,
   ingredients,
-  instructions,
-  measurements,
+
+  onClick,
 }: ICardProps): JSX.Element => {
   return (
-    <CardComponent id={id} img={img} className="card">
+    <CardComponent id={id} img={img} className="card" onClick={onClick}>
       <div className="drink-description">
         <h1 className="title">{name}</h1>
         <span className="category">{category}</span>

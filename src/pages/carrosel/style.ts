@@ -6,13 +6,13 @@ export const CarroselComponent = styled.div`
   align-items: flex-start;
   flex-direction: column;
 
-  width: 100vw;
+  width: 98.9vw;
   height: 100vh;
 
-  /* background: linear-gradient(0deg, #00000000 0%, #00000000 85%, #ffffff 100%),
-    var(--home-carrosel-background-color); */
-
   background: var(--home-carrosel-background-color);
+
+  background: linear-gradient(0deg, #00000000 0%, #00000000 85%, #000000 100%),
+    var(--home-carrosel-background-color);
 
   overflow: hidden;
 
@@ -26,7 +26,7 @@ export const CarroselComponent = styled.div`
 
     padding: 50px;
 
-    width: 1000px;
+    width: 100vw;
 
     overflow-x: auto;
 
@@ -40,8 +40,5 @@ export const CarroselComponent = styled.div`
   }
 
   @media only screen and (min-width: 600px) {
-    .carrosel {
-      width: 1200px;
-    }
   }
 `;
