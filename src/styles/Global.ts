@@ -3,9 +3,26 @@ import { createGlobalStyle } from 'styled-components';
 export default createGlobalStyle`
 
   :root {
-    --color-background:rgb(42, 72, 88);
-    --color-light: #fff;
-    --color-dark: #000;
+    --land-title: #fff;
+    --land-subText: #fff;
+
+    --land-button:#43260E; 
+    --land-button-text:#fff; 
+
+    --land-nav-title: #fff;
+    --land-nav-link:#fff;
+
+    --home-video-text: #fff;
+    --home-video-input-color: #fff;
+    --home-video-border-input: #fff;
+    --home-video-icon: #fff;
+
+    --home-carrosel-background-color: #090909;
+
+    --home-card-description: #fff;
+
+    --gutter: 20px;
+
     --color-remove: #B02E2E;
   }
 
@@ -18,11 +35,10 @@ export default createGlobalStyle`
   }
 
   body, input, button {
-    font-family: 'Karla', sans-serif;
-    background: red;
-    
-    
+    font-family:"Roboto",sans-serif;
+  
   }
+
 
   button {
     cursor: pointer;
