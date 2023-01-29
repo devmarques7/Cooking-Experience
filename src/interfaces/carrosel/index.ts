@@ -56,6 +56,16 @@ export interface IApiData {
   drinks: IDrinks[];
 }
 
+export interface IIngredients {
+  id: number;
+  name: string;
+}
+
+export interface IMeasurements {
+  id: number;
+  measure: string;
+}
+
 export interface IProduct {
   id: string;
   name: string;
@@ -63,6 +73,6 @@ export interface IProduct {
   category: string;
   setor: string;
   instructions: string;
-  ingredients: string[];
-  measurements: string[];
+  ingredients: IIngredients[];
+  measurements: IMeasurements[];
 }
