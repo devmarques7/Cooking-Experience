@@ -8,6 +8,7 @@ import {
   IMeasurements,
   IProduct,
 } from '../../interfaces/carrosel';
+import { ISubmit } from '../../pages/home';
 import { pageConfig } from '../../utils';
 
 export interface IAppProvider {
@@ -17,6 +18,7 @@ export interface IAppProvider {
   handleData: ({ drinks }: IApiData) => void;
   fetchData: () => Promise<void>;
   fetchDataById: (id: string) => Promise<void>;
+  fetchDataByName: (search: ISubmit) => Promise<void>;
 }
 
 export interface IProvider {
@@ -93,15 +95,29 @@ const AppProvider = ({ children }: IProvider) => {
       });
   };
 
+  const fetchDataByName = async ({ search }: ISubmit) => {
+    await axios({
+      method: 'get',
+      url: `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search.toLowerCase()}`,
+    })
+      .then((res) => {
+        handleData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <AppContext.Provider
       value={{
         repositories,
         recipe,
+        handleData,
         setRecipe,
         fetchData,
         fetchDataById,
-        handleData,
+        fetchDataByName,
       }}
     >
       {children}

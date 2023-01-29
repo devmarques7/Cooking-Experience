@@ -13,7 +13,13 @@ export const RecipeComponent = styled.div<IRecipeProps>`
   width: 100vw;
   height: 100vh;
 
-  background-image: url(${({ img }) => img});
+  background-image: linear-gradient(
+      180deg,
+      #00000000 0%,
+      #00000000 85%,
+      #000000 100%
+    ),
+    url(${({ img }) => img});
 
   background-repeat: no-repeat;
   background-position: center;
@@ -66,8 +72,10 @@ export const RecipeComponent = styled.div<IRecipeProps>`
     height: 330px;
 
     gap: 15px;
+    padding: 0;
 
     overflow-y: scroll;
+    overflow-x: hidden;
 
     ::-webkit-scrollbar {
       width: 0 !important;
@@ -82,6 +90,7 @@ export const RecipeComponent = styled.div<IRecipeProps>`
       min-height: 72px;
 
       padding: 10px 30px 10px 30px;
+      margin: 0 auto;
 
       background: rgba(9, 9, 9, 0.5);
       border-radius: 30px;

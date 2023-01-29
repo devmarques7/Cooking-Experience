@@ -25,9 +25,16 @@ export default createGlobalStyle`
     --home-recipe-description-category: #fff;
     --home-recipe-description-details: #fff;
 
-    --gutter: 20px;
 
-    --color-remove: #B02E2E;
+    --footer-background:#000;
+    --footer-acknowledgment:#fff;
+    --footer-reference:#fff;
+    --footer-userName:#fff;
+    --footer-instagram: #cf50ac;
+    --footer-github:#6d0052;
+    --footer-linkedin:#0e76a8;
+
+
   }
 
 
@@ -38,6 +45,10 @@ export default createGlobalStyle`
     box-sizing: border-box
   }
 
+  *::after, *::before{
+    box-sizing: border-box;
+  }
+
   body, input, button {
     font-family:"Roboto",sans-serif;
   
@@ -46,6 +57,10 @@ export default createGlobalStyle`
 
   button {
     cursor: pointer;
+  }
+
+  a{
+    text-decoration: none;
   }
 
 `;

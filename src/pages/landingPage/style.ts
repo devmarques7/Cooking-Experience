@@ -7,7 +7,7 @@ export const LandingComponent = styled.div<IPageConfig>`
   flex-direction: column;
   justify-content: flex-end;
 
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 
   background-image: url(${({ bgUrl }) => bgUrl});

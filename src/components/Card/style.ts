@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export interface ICardConfig {
+export interface ICardProps {
   img: string;
 }
 
-export const CardComponent = styled.li<ICardConfig>`
+export const CardComponent = styled.li<ICardProps>`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,7 +79,7 @@ export const CardComponent = styled.li<ICardConfig>`
 
     transition: 0.4s all;
 
-    height: 460px;
+    transform: scale(1.1);
 
     .carrosel {
       background-color: antiquewhite;

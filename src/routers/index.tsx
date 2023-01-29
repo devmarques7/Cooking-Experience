@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import Footer from '../components/footer';
 import Carrosel from '../pages/carrosel';
 import Home from '../pages/home';
 
@@ -15,6 +16,7 @@ export default function RouterMain(): JSX.Element {
             <LandingPage />
             <Home />
             <Carrosel />
+            <Footer />
           </>
         }
       />

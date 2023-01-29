@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const NavLinkComponent = styled.div`
+export const NavLinkComponent = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;

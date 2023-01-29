@@ -1,20 +1,54 @@
 import styled from 'styled-components';
 
-export const CarroselComponent = styled.div`
+export interface ICarroselProps {
+  position: number;
+}
+
+export const CarroselComponent = styled.div<ICarroselProps>`
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
 
-  width: 98.9vw;
+  width: 100vw;
   height: 100vh;
 
   background: var(--home-carrosel-background-color);
 
   background: linear-gradient(0deg, #00000000 0%, #00000000 85%, #000000 100%),
-    var(--home-carrosel-background-color);
+    linear-gradient(180deg, #00000000 0%, #00000000 85%, #000000 100%)
+      var(--home-carrosel-background-color);
 
   overflow: hidden;
+
+  .slide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    width: 100vw;
+
+    z-index: 1;
+
+    padding: 0 40px 0 40px;
+
+    top: 35%;
+    .arrow {
+      width: 30px;
+      height: 30px;
+
+      background: rgb(0, 0, 0, 0.5);
+
+      border: none;
+
+      font-size: 10px;
+
+      color: #fff;
+
+      border-radius: 20px;
+    }
+  }
 
   .carrosel {
     display: inline-grid;
@@ -24,11 +58,13 @@ export const CarroselComponent = styled.div`
 
     grid-template-columns: repeat(11);
 
-    padding: 50px;
+    padding: 20px;
 
-    width: 100vw;
+    min-width: 100%;
 
     overflow-x: auto;
+
+    transform: translateX(${({ position }) => position}%);
 
     ::-webkit-scrollbar {
       width: 0 !important;
