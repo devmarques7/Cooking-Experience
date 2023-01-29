@@ -33,7 +33,7 @@ export const CarroselComponent = styled.div<ICarroselProps>`
 
     padding: 0 40px 0 40px;
 
-    top: 35%;
+    bottom: -266px;
     .arrow {
       width: 30px;
       height: 30px;
@@ -65,6 +65,8 @@ export const CarroselComponent = styled.div<ICarroselProps>`
     overflow-x: auto;
 
     transform: translateX(${({ position }) => position}%);
+
+    gap: 35px;
 
     ::-webkit-scrollbar {
       width: 0 !important;

@@ -1,31 +1,17 @@
 import React from 'react';
 
-import { pageConfig } from '../../utils';
-
 import { CardComponent } from './style';
 
-interface ICardProps {
-  id: string;
-  name: string;
-  category: string;
-  setor: string;
-  img: string;
-  ingredients: string[];
-  instructions: string;
-  measurements: string[];
-  onClick?: (event: any) => void;
-}
+import { IProps } from '../../interfaces/carrosel';
 
 const Card = ({
   id,
   name,
   category,
-  setor,
   img,
   ingredients,
-
   onClick,
-}: ICardProps): JSX.Element => {
+}: IProps): JSX.Element => {
   return (
     <CardComponent id={id} img={img} className="card" onClick={onClick}>
       <div className="drink-description">

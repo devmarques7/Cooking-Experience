@@ -13,6 +13,19 @@ export const HomeComponent = styled.div`
   overflow: hidden;
 `;
 
+export const VideComponent = styled.video`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+`;
+
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
@@ -59,11 +72,13 @@ export const Container = styled.div`
     }
 
     .search-icon {
-      color: var(--home-video-icon);
-
       width: 30px;
 
-      margin-left: 20px;
+      .icon {
+        width: 100%;
+        cursor: pointer;
+        color: var(--home-video-icon);
+      }
     }
   }
 

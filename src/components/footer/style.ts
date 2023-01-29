@@ -40,6 +40,11 @@ export const FooterComponent = styled.div`
       .logo {
         width: 30px;
       }
+
+      .text {
+        color: #f7b141;
+        margin-left: 2px;
+      }
     }
   }
 
@@ -85,6 +90,9 @@ export const FooterComponent = styled.div`
       button {
         width: 50px;
       }
+      .tag {
+        border: none;
+      }
 
       .instagram {
         background-color: var(--footer-instagram);
@@ -95,6 +103,10 @@ export const FooterComponent = styled.div`
       }
       .linkedin {
         background-color: var(--footer-linkedin);
+      }
+
+      .web {
+        background-color: var(--footer-webPortifolio);
       }
     }
   }

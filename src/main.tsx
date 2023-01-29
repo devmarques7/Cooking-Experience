@@ -1,17 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import { BrowserRouter } from 'react-router-dom';
-import AppProvider from './context/carosselPage';
+import AppProvider from './context';
 
-import Routers from './routers';
+import Home from './pages/home';
+import Carrosel from './pages/carrosel';
+import Footer from './components/footer';
+import LandingPage from './pages/landingPage';
+
 import GloblaStyled from './styles/Global';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <BrowserRouter>
-    <AppProvider>
-      <GloblaStyled />
-      <Routers />
-    </AppProvider>
-  </BrowserRouter>
+  <AppProvider>
+    <GloblaStyled />
+    <LandingPage />
+    <Home />
+    <Carrosel />
+    <Footer />
+  </AppProvider>
 );

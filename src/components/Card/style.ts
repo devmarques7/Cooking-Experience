@@ -1,8 +1,5 @@
 import styled from 'styled-components';
-
-export interface ICardProps {
-  img: string;
-}
+import { ICardProps } from '../../interfaces/card';
 
 export const CardComponent = styled.li<ICardProps>`
   display: flex;
@@ -26,6 +23,8 @@ export const CardComponent = styled.li<ICardProps>`
   margin-right: 60px;
 
   opacity: 50%;
+
+  margin: 0 auto;
 
   cursor: pointer;
 

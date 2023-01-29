@@ -7,7 +7,9 @@ import { NavComponent } from './style';
 const Nav = (): JSX.Element => {
   return (
     <NavComponent id="navBar">
-      <h1 className="appTitle">{pageConfig.nav.title}</h1>
+      <a className="appTitle" href="#contact">
+        {pageConfig.nav.title}
+      </a>
       <div className="navLink">
         <Link
           content={pageConfig.nav.link1.content}

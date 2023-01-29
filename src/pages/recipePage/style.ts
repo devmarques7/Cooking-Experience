@@ -65,17 +65,24 @@ export const RecipeComponent = styled.div<IRecipeProps>`
 
   .recipe-list {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 
-    width: 314px;
+    width: 380px;
     height: 330px;
 
     gap: 15px;
-    padding: 0;
+    padding: 0 10 px 0 10px;
 
     overflow-y: scroll;
     overflow-x: hidden;
+
+    border-left: 0.5px solid #fff;
+
+    border-right: 0.5px solid #fff;
+
+    border-radius: 30px;
 
     ::-webkit-scrollbar {
       width: 0 !important;
@@ -86,7 +93,7 @@ export const RecipeComponent = styled.div<IRecipeProps>`
       justify-content: space-between;
       align-items: center;
 
-      width: 314px;
+      width: 90%;
       min-height: 72px;
 
       padding: 10px 30px 10px 30px;
@@ -117,8 +124,7 @@ export const RecipeComponent = styled.div<IRecipeProps>`
       align-items: center;
       flex-direction: column;
 
-      width: 314px;
-      min-height: 72px;
+      width: 90%;
 
       padding: 10px 30px 10px 30px;
 
@@ -151,11 +157,8 @@ export const RecipeComponent = styled.div<IRecipeProps>`
     }
 
     .instructions:hover {
-      transition: 2s all;
-
-      min-height: 50%;
-
       .description {
+        transition: 2s all;
         display: flex;
       }
     }

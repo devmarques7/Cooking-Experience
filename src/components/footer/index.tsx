@@ -10,6 +10,7 @@ import { FooterComponent } from './style';
 import { FaInstagram } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { FaLinkedinIn } from 'react-icons/fa';
+import { MdOutlineContactPage } from 'react-icons/Md';
 
 const Footer = (): JSX.Element => {
   return (
@@ -18,6 +19,7 @@ const Footer = (): JSX.Element => {
         <h1 className="acknowledgment"> Thanks</h1>
         <div className="reference">
           Web | <img src="./src/favicon/logo.svg" className="logo" />
+          <span className="text">ails</span>
         </div>
       </section>
       <div className="contact">
@@ -32,7 +34,7 @@ const Footer = (): JSX.Element => {
         </div>
         <div className="link">
           <Button
-            className="instagram"
+            className="instagram tag"
             as="a"
             target="_blank"
             href={`https://instagram.com/${pageConfig.user.instagramUser}`}
@@ -40,7 +42,7 @@ const Footer = (): JSX.Element => {
             <FaInstagram />
           </Button>
           <Button
-            className="github"
+            className="github tag"
             as="a"
             target="_blank"
             href={`https://github.com/${pageConfig.user.gitHubUser}`}
@@ -48,12 +50,20 @@ const Footer = (): JSX.Element => {
             <FaGithub />
           </Button>
           <Button
-            className="linkedin"
+            className="linkedin tag"
             as="a"
             target="_blank"
             href={`https://linkedin.com/in/${pageConfig.user.linkedinUser}`}
           >
             <FaLinkedinIn />
+          </Button>
+          <Button
+            className="web tag"
+            as="a"
+            target="_blank"
+            href={pageConfig.user.webProfileUser}
+          >
+            <MdOutlineContactPage />
           </Button>
         </div>
       </div>
