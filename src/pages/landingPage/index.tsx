@@ -3,9 +3,6 @@ import Nav from '../../components/NavBar';
 
 import { pageConfig } from '../../utils';
 
-// import { Button } from 'react-bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
 import { Container, StartButton } from './style';
 import { LandingComponent } from './style';
 

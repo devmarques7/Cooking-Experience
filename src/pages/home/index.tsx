@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { pageConfig } from '../../utils';
 
@@ -6,21 +6,24 @@ import VideoPage from '../video';
 import { Container, HomeComponent } from './style';
 
 import { RiSearch2Fill } from 'react-icons/Ri';
+import { AppContext } from '../../context/carosselPage';
+
+export interface ISubmit {
+  search: string;
+}
 
 const Home = (): JSX.Element => {
   const { register, handleSubmit } = useForm();
   const [search, setSearch] = useState('');
+  const { fetchDataByName, setRecipe } = useContext(AppContext);
 
-  const onSubmit = (data: any): void => {
-    console.log(data);
-  };
-
-  const handleChange = (event: any): void => {
-    setSearch(event.target.value);
+  const onSubmit = (data: ISubmit): void => {
+    fetchDataByName(data);
+    setRecipe(true);
   };
 
   return (
-    <HomeComponent>
+    <HomeComponent id="home">
       <VideoPage />
       <Container>
         <h2 className="title over">{pageConfig.home.inicialText}</h2>
@@ -33,7 +36,6 @@ const Home = (): JSX.Element => {
             type={pageConfig.home.input.type}
             {...register('search')}
             className="input over"
-            onChange={handleChange}
           ></input>
           <RiSearch2Fill className="search-icon" />
         </form>

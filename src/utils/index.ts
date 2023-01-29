@@ -1,19 +1,25 @@
 //Here is the central data base, where you may change some important contente on the page
 
 export const pageConfig = {
+  user: {
+    nameUser: 'Daniel Marques',
+    instagramUser: 'danielmfgp',
+    gitHubUser: 'devmarques7',
+    linkedinUser: 'devmarques7',
+  },
   nav: {
     title: 'Tails',
     link1: {
       content: 'Home',
-      to: '/',
+      to: '#home',
     },
     link2: {
       content: 'Receipts',
-      to: '/',
+      to: '#receipts',
     },
     link3: {
       content: 'Contact',
-      to: '/',
+      to: '#contact',
     },
   },
   intro: {
@@ -34,7 +40,7 @@ export const pageConfig = {
     },
   },
   carrosel: {
-    amountOfDrinks: 10,
+    amountOfDrinks: 20,
   },
   bgUrl: '/src/public/backgroud/background.svg',
   bgVideoUrl: '/src/public/backgroud/videoBackground.mp4',
