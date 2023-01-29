@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 
-import Card from '../../components/Card';
-import { CarroselComponent } from './style';
-
 import RecipePage from '../recipePage';
-import { AppContext } from '../../context/carosselPage';
+import Card from '../../components/Card';
+
+import { AppContext } from '../../context';
+import { CarroselComponent } from './style';
 
 const Carrosel = (): JSX.Element => {
   const { repositories, recipe, setRecipe, fetchData, fetchDataById } =
@@ -13,11 +13,11 @@ const Carrosel = (): JSX.Element => {
 
   const handleSlider = (click): void => {
     const slide = click.target.className;
-    console.log(position);
+
     if (slide === 'arrow right' && position > -40) {
-      setPosition(position - 9);
+      setPosition(position - 1);
     } else if (slide === 'arrow left' && position < 45) {
-      setPosition(position + 9);
+      setPosition(position + 1);
     }
   };
 
@@ -26,7 +26,7 @@ const Carrosel = (): JSX.Element => {
     fetchData();
   }, []);
   return (
-    <CarroselComponent id="receipts" position={position}>
+    <CarroselComponent id="recipes" position={position}>
       {recipe ? (
         <RecipePage></RecipePage>
       ) : (

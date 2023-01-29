@@ -6,7 +6,7 @@ export default createGlobalStyle`
     --land-title: #fff;
     --land-subText: #fff;
 
-    --land-button:#43260E; 
+    --land-button:rgb(0, 0, 0, 0.5); 
     --land-button-text:#fff; 
 
     --land-nav-title: #fff;
@@ -33,6 +33,8 @@ export default createGlobalStyle`
     --footer-instagram: #cf50ac;
     --footer-github:#6d0052;
     --footer-linkedin:#0e76a8;
+    --footer-webPortifolio:#67020b;
+
 
 
   }
@@ -49,9 +51,8 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body, input, button {
+  body, input, button, h1, h2 , h3, h4, p , span {
     font-family:"Roboto",sans-serif;
-  
   }
 
 
@@ -61,6 +62,11 @@ export default createGlobalStyle`
 
   a{
     text-decoration: none;
+  }
+
+  ul , li {
+    margin: 0;
+    padding: 0;
   }
 
 `;

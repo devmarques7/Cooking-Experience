@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 import { RecipeComponent } from './style';
-import { AppContext } from '../../context/carosselPage';
+import { AppContext } from '../../context';
 import { IIngredients } from '../../interfaces/carrosel';
 
 import { RiArrowDownSLine } from 'react-icons/Ri';
@@ -9,25 +9,28 @@ import { TfiArrowCircleLeft } from 'react-icons/Tfi';
 
 const RecipePage = (): JSX.Element => {
   const { repositories, setRecipe, fetchData } = useContext(AppContext);
-  console.log(repositories);
+
+  //Selecting the first recipe brought from the request made by the user
+  const item = repositories[0];
+
   return (
-    <RecipeComponent img={repositories[0].img}>
+    <RecipeComponent img={item.img}>
       <section className="description">
-        <h1 className="title">{repositories[0].name}</h1>
-        <h2 className="category">{repositories[0].category}</h2>
-        <span className="datails">{`${
-          repositories[0].ingredients.length
-        } Ingredient | ${repositories[0].ingredients.length * 2} min`}</span>
+        <h1 className="title">{item.name}</h1>
+        <h2 className="category">{item.category}</h2>
+        <span className="datails">{`${item.ingredients.length} Ingredient | ${
+          item.ingredients.length * 2
+        } min`}</span>
       </section>
       <ul className="recipe-list">
-        {repositories[0].ingredients.map((ingredient: IIngredients, index) => {
+        {item.ingredients.map((ingredient: IIngredients, index) => {
           return (
             <li key={index} className="recipe">
               <h3 className="ingredient">{ingredient.name}</h3>
 
-              {repositories[0].measurements[index] && (
+              {item.measurements[index] && (
                 <span className="measure">
-                  {repositories[0].measurements[index].measure}
+                  {item.measurements[index].measure}
                 </span>
               )}
             </li>
@@ -39,7 +42,7 @@ const RecipePage = (): JSX.Element => {
             <RiArrowDownSLine className="arrow-hover" />
           </div>
 
-          <span className="description"> {repositories[0].instructions}</span>
+          <span className="description"> {item.instructions}</span>
         </li>
       </ul>
 

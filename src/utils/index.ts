@@ -6,6 +6,7 @@ export const pageConfig = {
     instagramUser: 'danielmfgp',
     gitHubUser: 'devmarques7',
     linkedinUser: 'devmarques7',
+    webProfileUser: 'https://n9.cl/danielmarques',
   },
   nav: {
     title: 'Tails',
@@ -14,8 +15,8 @@ export const pageConfig = {
       to: '#home',
     },
     link2: {
-      content: 'Receipts',
-      to: '#receipts',
+      content: 'Recipes',
+      to: '#recipes',
     },
     link3: {
       content: 'Contact',
@@ -42,6 +43,6 @@ export const pageConfig = {
   carrosel: {
     amountOfDrinks: 20,
   },
-  bgUrl: '/src/public/backgroud/background.svg',
-  bgVideoUrl: '/src/public/backgroud/videoBackground.mp4',
+  bgUrl: '/src/public/background.svg',
+  bgVideoUrl: '/src/public/videoBackground.mp4',
 };

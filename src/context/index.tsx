@@ -1,36 +1,28 @@
-import axios from 'axios';
-import React, { useState } from 'react';
-import { createContext, ReactNode } from 'react';
+import React from 'react';
+import { useState } from 'react';
+import { createContext } from 'react';
 import {
   IApiData,
   IDrinks,
   IIngredients,
   IMeasurements,
   IProduct,
-} from '../../interfaces/carrosel';
-import { ISubmit } from '../../pages/home';
-import { pageConfig } from '../../utils';
+} from '../interfaces/carrosel';
 
-export interface IAppProvider {
-  repositories: IProduct[];
-  recipe: boolean;
-  setRecipe: React.Dispatch<React.SetStateAction<boolean>>;
-  handleData: ({ drinks }: IApiData) => void;
-  fetchData: () => Promise<void>;
-  fetchDataById: (id: string) => Promise<void>;
-  fetchDataByName: (search: ISubmit) => Promise<void>;
-}
-
-export interface IProvider {
-  children: ReactNode;
-}
+import { pageConfig } from '../utils';
+import { ISubmit } from '../interfaces/home';
+import { IAppProvider, IProvide } from '../interfaces/context';
+import { requestData } from '../service';
 
 export const AppContext = createContext<IAppProvider>({} as IAppProvider);
 
-const AppProvider = ({ children }: IProvider) => {
-  const [repositories, setRepositories] = useState<IProduct[]>([]);
+const AppProvider = ({ children }: IProvide) => {
   const [recipe, setRecipe] = useState<boolean>(false);
+  const [repositories, setRepositories] = useState<IProduct[]>([]);
+  //base URL for the repository
+  const baseURL = 'https://www.thecocktaildb.com/api/json/v1/1/';
 
+  //Saving product list from Api
   const drinkList: IProduct[] = [];
 
   // Formatting data received from the api
@@ -69,43 +61,20 @@ const AppProvider = ({ children }: IProvider) => {
   const fetchData = async () => {
     // Request object many times from the server to create a drink list
     for (let i = 0; i <= pageConfig.carrosel.amountOfDrinks; i++) {
-      await axios({
-        method: 'get',
-        url: 'https://www.thecocktaildb.com/api/json/v1/1/random.php',
-      })
-        .then((res) => {
-          handleData(res.data);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+      handleData(await requestData(`${baseURL}random.php`));
     }
   };
 
   const fetchDataById = async (id: string) => {
-    await axios({
-      method: 'get',
-      url: `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`,
-    })
-      .then((res) => {
-        handleData(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    handleData(await requestData(`${baseURL}lookup.php?i=${id}`));
   };
 
   const fetchDataByName = async ({ search }: ISubmit) => {
-    await axios({
-      method: 'get',
-      url: `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search.toLowerCase()}`,
-    })
-      .then((res) => {
-        handleData(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    if (search) {
+      handleData(
+        await requestData(`${baseURL}search.php?s=${search.toLowerCase()}`)
+      );
+    }
   };
 
   return (
@@ -124,5 +93,4 @@ const AppProvider = ({ children }: IProvider) => {
     </AppContext.Provider>
   );
 };
-
 export default AppProvider;

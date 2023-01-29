@@ -1,3 +1,3 @@
-export interface IPageConfig {
+export interface IPageProps {
   bgUrl: string;
 }
