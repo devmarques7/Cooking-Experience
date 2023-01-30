@@ -10,7 +10,7 @@ import { FooterComponent } from './style';
 import { FaInstagram } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { FaLinkedinIn } from 'react-icons/fa';
-import { MdOutlineContactPage } from 'react-icons/Md';
+import { MdOutlineContactPage } from 'react-icons/md';
 
 const Footer = (): JSX.Element => {
   return (

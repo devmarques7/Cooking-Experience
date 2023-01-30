@@ -4,8 +4,8 @@ import { useForm } from 'react-hook-form';
 
 import { pageConfig } from '../../utils';
 
-import { RiSearch2Fill } from 'react-icons/Ri';
 import { AppContext } from '../../context';
+import { RiSearch2Fill } from 'react-icons/Ri';
 import { ISubmit } from '../../interfaces/home';
 
 import { Container, HomeComponent, VideComponent } from './style';

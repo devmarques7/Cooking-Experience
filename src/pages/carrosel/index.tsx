@@ -51,9 +51,9 @@ const Carrosel = (): JSX.Element => {
                   ingredients={item.ingredients}
                   instructions={item.instructions}
                   measurements={item.measurements}
-                  onClick={(event) => {
+                  onClick={() => {
                     setRecipe(true);
-                    fetchDataById(event.target.id);
+                    fetchDataById(item.id);
                   }}
                 />
               );
