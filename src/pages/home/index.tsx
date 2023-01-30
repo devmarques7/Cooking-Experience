@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { pageConfig } from '../../utils';
 
 import { AppContext } from '../../context';
-import { RiSearch2Fill } from 'react-icons/Ri';
+import { FiSearch } from 'react-icons/fi';
 import { ISubmit } from '../../interfaces/home';
 
 import { Container, HomeComponent, VideComponent } from './style';
@@ -37,7 +37,7 @@ const Home = (): JSX.Element => {
             className="input over"
           ></input>
           <a href="#recipes" className="search-icon" type="submit">
-            <RiSearch2Fill className="icon" />
+            <FiSearch className="icon" />
           </a>
         </form>
       </Container>

@@ -4,8 +4,8 @@ import { RecipeComponent } from './style';
 import { AppContext } from '../../context';
 import { IIngredients } from '../../interfaces/carrosel';
 
-import { RiArrowDownSLine } from 'react-icons/Ri';
-import { TfiArrowCircleLeft } from 'react-icons/Tfi';
+import { IoIosArrowDropleftCircle } from 'react-icons/io';
+import { IoMdArrowDropleftCircle } from 'react-icons/io';
 
 const RecipePage = (): JSX.Element => {
   const { repositories, setRecipe, fetchData } = useContext(AppContext);
@@ -39,14 +39,14 @@ const RecipePage = (): JSX.Element => {
         <li key={'recipe'} className="instructions">
           <div className="section-hover">
             <span className="title-hover">Instructions</span>
-            <RiArrowDownSLine className="arrow-hover" />
+            <IoIosArrowDropleftCircle className="arrow-hover" />
           </div>
 
           <span className="description"> {item.instructions}</span>
         </li>
       </ul>
 
-      <TfiArrowCircleLeft
+      <IoMdArrowDropleftCircle
         className="arrow"
         onClick={() => {
           fetchData();

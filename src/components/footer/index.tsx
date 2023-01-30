@@ -18,7 +18,7 @@ const Footer = (): JSX.Element => {
       <a className="welcome" href="/">
         <h1 className="acknowledgment"> Thanks</h1>
         <div className="reference">
-          Web | <img src="./src/favicon/logo.svg" className="logo" />
+          Web | <img src="/favicon/logo.svg" className="logo" />
           <span className="text">ails</span>
         </div>
       </a>

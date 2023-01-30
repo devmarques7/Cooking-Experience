@@ -43,6 +43,6 @@ export const pageConfig = {
   carrosel: {
     amountOfDrinks: 20,
   },
-  bgUrl: '/src/public/background.svg',
-  bgVideoUrl: '/src/public/videoBackground.mp4',
+  bgUrl: '/background.svg',
+  bgVideoUrl: '/videoBackground.mp4',
 };

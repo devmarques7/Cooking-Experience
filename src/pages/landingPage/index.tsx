@@ -7,6 +7,7 @@ import { Container, StartButton } from './style';
 import { LandingComponent } from './style';
 
 const LandingPage = (): JSX.Element => {
+  console.log(pageConfig.bgUrl);
   return (
     <LandingComponent bgUrl={pageConfig.bgUrl}>
       <Nav />
