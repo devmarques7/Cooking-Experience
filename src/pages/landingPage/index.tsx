@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from '../../components/NavBar';
+import Nav from '../../components/Nav';
 
 import { pageConfig } from '../../utils';
 

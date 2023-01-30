@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { pageConfig } from '../../utils';
-import Link from '../NavLink';
+import Link from '../Link';
 import { NavComponent } from './style';
 
 const Nav = (): JSX.Element => {
