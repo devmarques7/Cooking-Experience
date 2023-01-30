@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Cooking Experience
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project aims to facilitate access to recipes for customers who seek to develop skills in cocktail preparation. Thus, with the attractive design and components that present ingredients, measurements and instructions, the customer will feel excited and ready with everything in the palm of his hand to impress his friends with a wonderful cocktail.
 
-## Available Scripts
+## Projeto Realizado com:
 
-In the project directory, you can run:
+- Vite + React + Typescript + Context API
 
-### `yarn start`
+### Arquitetura do Software
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- (Layers) - Architecture follows the pattern where the customer has access to different types of drinks and more details about how they are prepared.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Libs Utilizadas
 
-### `yarn test`
+- Axios - For API Requests
+- Styled Components - For Application CSS Styling
+- Bootstrap - For pre-component-styling
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Documentação
 
-### `yarn build`
+To start this project, it is necessary to install the dependencies, which will be used in the tests. So use the command below to install such dependencies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+yarn install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Attention:** it is necessary to use `yarn` because this project was started with this package manager.
+To check if you already have the yarn manager installed use the following command:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+yarn --version
+```
 
-### `yarn eject`
+If you don't have yarn installed, use the command below to install it globally on your machine:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+npm install --global yarn
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To launch the application, use the command below on your machine:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+yarn vite
+```

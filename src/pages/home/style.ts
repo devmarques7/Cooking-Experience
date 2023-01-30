@@ -5,12 +5,25 @@ export const HomeComponent = styled.div`
   flex-direction: column;
   justify-content: flex-start;
 
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 
   background-color: black;
 
   overflow: hidden;
+`;
+
+export const VideComponent = styled.video`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
 `;
 
 export const Container = styled.div`
@@ -59,11 +72,13 @@ export const Container = styled.div`
     }
 
     .search-icon {
-      color: var(--home-video-icon);
-
       width: 30px;
 
-      margin-left: 20px;
+      .icon {
+        width: 100%;
+        cursor: pointer;
+        color: var(--home-video-icon);
+      }
     }
   }
 

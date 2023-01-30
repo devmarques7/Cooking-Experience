@@ -76,3 +76,7 @@ export interface IProduct {
   ingredients: IIngredients[];
   measurements: IMeasurements[];
 }
+
+export interface IProps extends IProduct {
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void;
+}

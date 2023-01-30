@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-import { IPageConfig } from '../../interfaces/config/indext';
+import { IPageProps } from '../../interfaces/config/indext';
 
-export const LandingComponent = styled.div<IPageConfig>`
+export const LandingComponent = styled.div<IPageProps>`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 
   background-image: url(${({ bgUrl }) => bgUrl});
@@ -79,6 +79,10 @@ export const Container = styled.div`
 `;
 
 export const StartButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   margin: 0 auto;
 
   width: 45%;

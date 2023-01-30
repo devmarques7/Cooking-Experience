@@ -1,10 +1,7 @@
 import styled from 'styled-components';
+import { ICardProps } from '../../interfaces/card';
 
-export interface ICardConfig {
-  img: string;
-}
-
-export const CardComponent = styled.li<ICardConfig>`
+export const CardComponent = styled.li<ICardProps>`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,6 +23,8 @@ export const CardComponent = styled.li<ICardConfig>`
   margin-right: 60px;
 
   opacity: 50%;
+
+  margin: 0 auto;
 
   cursor: pointer;
 
@@ -79,7 +78,7 @@ export const CardComponent = styled.li<ICardConfig>`
 
     transition: 0.4s all;
 
-    height: 460px;
+    transform: scale(1.1);
 
     .carrosel {
       background-color: antiquewhite;
