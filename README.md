@@ -40,5 +40,5 @@ npm install --global yarn
 To launch the application, use the command below on your machine:
 
 ```
-yarn vite
+yarn dev
 ```
