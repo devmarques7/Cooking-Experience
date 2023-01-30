@@ -70,7 +70,7 @@ export const RecipeComponent = styled.div<IRecipeProps>`
     flex-direction: column;
 
     width: 380px;
-    height: 330px;
+    height: 305px;
 
     gap: 15px;
     padding: 0 10 px 0 10px;

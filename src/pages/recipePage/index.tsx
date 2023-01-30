@@ -4,7 +4,7 @@ import { RecipeComponent } from './style';
 import { AppContext } from '../../context';
 import { IIngredients } from '../../interfaces/carrosel';
 
-import { IoIosArrowDropleftCircle } from 'react-icons/io';
+import { IoIosArrowDropdownCircle } from 'react-icons/io';
 import { IoMdArrowDropleftCircle } from 'react-icons/io';
 
 const RecipePage = (): JSX.Element => {
@@ -27,7 +27,6 @@ const RecipePage = (): JSX.Element => {
           return (
             <li key={index} className="recipe">
               <h3 className="ingredient">{ingredient.name}</h3>
-
               {item.measurements[index] && (
                 <span className="measure">
                   {item.measurements[index].measure}
@@ -39,13 +38,11 @@ const RecipePage = (): JSX.Element => {
         <li key={'recipe'} className="instructions">
           <div className="section-hover">
             <span className="title-hover">Instructions</span>
-            <IoIosArrowDropleftCircle className="arrow-hover" />
+            <IoIosArrowDropdownCircle className="arrow-hover" />
           </div>
-
           <span className="description"> {item.instructions}</span>
         </li>
       </ul>
-
       <IoMdArrowDropleftCircle
         className="arrow"
         onClick={() => {
