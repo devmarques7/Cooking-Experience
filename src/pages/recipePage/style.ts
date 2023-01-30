@@ -65,7 +65,7 @@ export const RecipeComponent = styled.div<IRecipeProps>`
 
   .recipe-list {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 
