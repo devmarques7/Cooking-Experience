@@ -1,6 +1,6 @@
 # Cooking Experience
 
-Fale sobre o Projeto aqui
+This project aims to facilitate access to recipes for customers who seek to develop skills in cocktail preparation. Thus, with the attractive design and components that present ingredients, measurements and instructions, the customer will feel excited and ready with everything in the palm of his hand to impress his friends with a wonderful cocktail.
 
 ## Projeto Realizado com:
 
@@ -8,37 +8,37 @@ Fale sobre o Projeto aqui
 
 ### Arquitetura do Software
 
-- (Layers) - arquitetura segue o padão onde o cliente tem acesso a diversos tipos de bébidas e mais detalhes sobre seu modo de preparo.
+- (Layers) - Architecture follows the pattern where the customer has access to different types of drinks and more details about how they are prepared.
 
 ### Libs Utilizadas
 
-- Axios - Para as Requisições de API
-- Styled Components - Para Estilização CSS da Aplicação
-- Bootstrap - Para estilização de components
+- Axios - For API Requests
+- Styled Components - For Application CSS Styling
+- Bootstrap - For pre-component-styling
 
 ### Documentação
 
-Para inciar este projeto, é necessário instalar as dependências, que serão utilizadas nos testes. Portanto utilize o comando abaixo para instalar tais dependências:
+To start this project, it is necessary to install the dependencies, which will be used in the tests. So use the command below to install such dependencies:
 
 ```
 yarn install
 ```
 
-**Atenção:** é necessário utilizar o `yarn` pois esse projeto foi iniciado com esse gerenciador de pacotes.
-Para verificar se já possui o gerenciador yarn instalado utilize o seguinte comando:
+**Attention:** it is necessary to use `yarn` because this project was started with this package manager.
+To check if you already have the yarn manager installed use the following command:
 
 ```
 yarn --version
 ```
 
-Caso não possua o yarn instalado, utilize o comando abaixo para instalar globalmente na sua máquina:
+If you don't have yarn installed, use the command below to install it globally on your machine:
 
 ```
 npm install --global yarn
 ```
 
-Para inicializar a aplicação, utilize o comando abaixo na sua máquina:
+To launch the application, use the command below on your machine:
 
 ```
-yarn dev
+yarn vite
 ```
