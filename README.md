@@ -2,21 +2,21 @@
 
 This project aims to facilitate access to recipes for customers who seek to develop skills in cocktail preparation. Thus, with the attractive design and components that present ingredients, measurements and instructions, the customer will feel excited and ready with everything in the palm of his hand to impress his friends with a wonderful cocktail.
 
-## Projeto Realizado com:
+## Project realized with:
 
 - Vite + React + Typescript + Context API
 
-### Arquitetura do Software
+### Software Architecture
 
 - (Layers) - Architecture follows the pattern where the customer has access to different types of drinks and more details about how they are prepared.
 
-### Libs Utilizadas
+### Libraries used
 
 - Axios - For API Requests
 - Styled Components - For Application CSS Styling
 - Bootstrap - For pre-component-styling
 
-### Documentação
+### Documentation
 
 To start this project, it is necessary to install the dependencies, which will be used in the tests. So use the command below to install such dependencies:
 
